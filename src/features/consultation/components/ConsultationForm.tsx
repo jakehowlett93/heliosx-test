@@ -16,7 +16,8 @@ export const ConsultationForm = () => {
 
   const isLastQuestion = currentQuestionInd === questions.length - 1;
 
-  const handleNextStep = async () => {
+  const handleNextStep = (e: React.SyntheticEvent<HTMLFormElement>) => {
+    e.preventDefault();
     if (isLastQuestion) {
       submit(formData);
     } else {
@@ -38,7 +39,7 @@ export const ConsultationForm = () => {
   const currentValue = formData[currentQuestion.name] || "";
 
   return (
-    <form className="consultation-form">
+    <form onSubmit={handleNextStep} className="consultation-form">
       <div className="question-card-wrapper">
         <QuestionCard
           question={currentQuestion}
@@ -49,8 +50,7 @@ export const ConsultationForm = () => {
       <div className="form-action-section">
         <button
           className="button"
-          type="button"
-          onClick={handleNextStep}
+          type="submit"
           disabled={isLoading || !currentValue}
         >
           {getButtonText()}
