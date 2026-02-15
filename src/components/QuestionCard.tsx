@@ -15,20 +15,24 @@ export const QuestionCard = ({
     <fieldset>
       <legend>{label}</legend>
 
-      {description && <p>{description}</p>}
+      {description && <p className="description">{description}</p>}
       <div className="options">
-        {options.map((option) => (
-          <label key={option.value} htmlFor={name}>
-            {option.label}
-            <input
-              type="radio"
-              name={name}
-              value={option.value}
-              checked={value === option.value}
-              onChange={onChange}
-            />
-          </label>
-        ))}
+        {options.map((option, index) => {
+          const id = `${name}-${index}`;
+          return (
+            <label key={option.value} htmlFor={id}>
+              {option.label}
+              <input
+                id={id}
+                type="radio"
+                name={name}
+                value={option.value}
+                checked={value === option.value}
+                onChange={onChange}
+              />
+            </label>
+          );
+        })}
       </div>
     </fieldset>
   );

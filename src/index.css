@@ -1,11 +1,12 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
   --color-primary: #003f82;
+  --color-secondary: #edf0fa;
   --color-orange: #fa650a;
 
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  font-weight: 600;
+  font-size: 18px;
   color: var(--color-primary);
   background-color: #fff;
   font-synthesis: none;
@@ -23,6 +24,7 @@ body,
 
 main {
   flex: 1;
+  background-color: var(--color-secondary);
 }
 
 header {
@@ -38,4 +40,6 @@ footer {
   padding: 1rem 0;
   display: flex;
   justify-content: center;
+  color: white;
+  background-color: var(--color-primary);
 }
