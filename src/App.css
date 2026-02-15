@@ -57,13 +57,31 @@ fieldset {
 .options {
   display: flex;
   justify-content: center;
+  gap: 12px;
 }
 
 .consultation-form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 300px;
+  min-height: 200px;
+}
+
+.button {
+  width: 100%;
+  max-width: 200px;
+  background-color: var(--color-orange);
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }
 
 .question-card-wrapper {

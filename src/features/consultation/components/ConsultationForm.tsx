@@ -2,12 +2,12 @@ import { useState } from "react";
 import { QuestionCard } from "../../../components/QuestionCard";
 import { questions } from "../../../data";
 import { ThankYou } from "./ThankYou";
+import { useSubmitConsult } from "../../hooks/useSubmitConsult";
 
 export const ConsultationForm = () => {
   const [currentQuestionInd, setCurrentQuestionInd] = useState<number>(0);
   const [formData, setFormData] = useState<Record<string, string>>({});
-  const [isSuccess, setIsSuccess] = useState<boolean>(false);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const { submit, isSuccess, isLoading } = useSubmitConsult();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -18,7 +18,7 @@ export const ConsultationForm = () => {
 
   const handleNextStep = async () => {
     if (isLastQuestion) {
-      console.log(formData);
+      submit(formData);
     } else {
       setCurrentQuestionInd((prev) => prev + 1);
     }
@@ -48,6 +48,7 @@ export const ConsultationForm = () => {
       </div>
       <div className="form-action-section">
         <button
+          className="button"
           type="button"
           onClick={handleNextStep}
           disabled={isLoading || !currentValue}

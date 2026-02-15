@@ -4,6 +4,7 @@
   font-weight: 400;
 
   --color-primary: #003f82;
+  --color-orange: #fa650a;
 
   color: var(--color-primary);
   background-color: #fff;
