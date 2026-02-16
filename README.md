@@ -8,9 +8,9 @@ A simple consultation form built in React + Vite that presents questions one at 
 
 ## Versions:
 
-Node: v22.12.0
-npm: 10.9.0
-React: 19.2.4
+- Node: v22.12.0
+- npm: 10.9.0
+- React: 19.2.4
 
 ## Tech:
 
