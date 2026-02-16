@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { QuestionCard } from "../../../components/QuestionCard";
-import { questions } from "../../../data";
 import { ThankYou } from "./ThankYou";
-import { useSubmitConsult } from "../../hooks/useSubmitConsult";
+import { QuestionCard } from "@/components/QuestionCard";
+import { useSubmitConsult } from "@/features/hooks/useSubmitConsult";
+import { questions } from "@/data";
 
 export const ConsultationForm = () => {
   const [currentQuestionInd, setCurrentQuestionInd] = useState<number>(0);

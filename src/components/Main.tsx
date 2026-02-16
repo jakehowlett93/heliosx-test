@@ -1,4 +1,4 @@
-import { ConsultationForm } from "../features/consultation/components/ConsultationForm";
+import { ConsultationForm } from "@/features/consultation/components/ConsultationForm";
 
 export const Main = () => {
   return (

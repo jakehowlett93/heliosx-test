@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ConsultationServiceClient } from "../../api/service";
+import { ConsultationServiceClient } from "@/api/service";
 
 export const useSubmitConsult = () => {
   //typically loading / success / error states would be handled by a library such as ReactQuery
