@@ -2,9 +2,9 @@
 
 A simple consultation form built in React + Vite that presents questions one at a time. Users can select answers and submit, with a mock hook simulating backend submission.
 
-`npm install` to install dependencies
-`npm run dev` to run the app
-`npx vitest` to run tests
+- `npm install` to install dependencies
+- `npm run dev` to run the app
+- `npx vitest` to run tests
 
 ## Versions:
 
